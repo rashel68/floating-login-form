@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floatin Login Form</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .form-item{
+            background-image: url(image.png);
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .form-item form{
+            padding: 60px 50px 30px 50px;
+            background-color: rgba(3, 1, 12, 0.8);
+            border-radius: 20px;
+        }
+        .floating-item{
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .floating-item > input{
+            border: none;
+            border-bottom: 1px solid dodgerblue;
+            outline: none;
+            background-color: transparent;
+            
+        }
+        .floating-item label{
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: gray;
+            display: inline-block;
+            pointer-events: none;
+            transition: 0.4s;
+        }
+        .floating-item input:focus ~ label{
+            color: #dfdfdf;
+            top: -1.1em;
+            font-size: 0.8em;
+        }
+
+        .form-item form > button {
+            border: none;
+            padding: 8px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: dodgerblue;
+            cursor: pointer;
+            border-radius: 10px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-item">
+    <form action="">
+        <div class="floating-item">
+            <input type="text" name="UserName" id="userName"> <label for="userName">User Name</label>
+        </div>
+        <div class="floating-item">
+            <input type="password" name="" id="password"> <label for="password">Password</label>
+        </div>
+        <button>Login</button>
+    </form>
+    </div>
+</body>
+</html>
